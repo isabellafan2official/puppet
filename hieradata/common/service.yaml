@@ -3142,7 +3142,7 @@ service::catalog:
       - eqiad
       - codfw
     port: 443
-    state: production
+    state: lvs_setup
     discovery:
       - dnsdisc: helm-charts
         active_active: true
@@ -3170,7 +3170,7 @@ service::catalog:
       - eqiad
       - codfw
     port: 443
-    state: production
+    state: lvs_setup
     discovery:
       - dnsdisc: releases
         active_active: true
@@ -3686,7 +3686,7 @@ service::catalog:
       - eqiad
       - codfw
     port: 8090
-    state: production
+    state: lvs_setup
     discovery:
       - dnsdisc: puppetdb-api
         active_active: true
@@ -3733,7 +3733,7 @@ service::catalog:
         default: 10.192.0.102
       eqiad:
         default: 10.64.16.149
-    state: production
+    state: lvs_setup
 
   grafana:
     encryption: true
@@ -3758,7 +3758,7 @@ service::catalog:
         default: 10.192.0.160
       eqiad:
         default: 10.64.0.119
-    state: production
+    state: lvs_setup
 
   librenms:
     encryption: true
@@ -3783,4 +3783,4 @@ service::catalog:
         default: 208.80.153.110
       eqiad:
         default: 208.80.154.5
-    state: production
+    state: lvs_setup
