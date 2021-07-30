@@ -32,6 +32,9 @@ class profile::base(
     include passwords::root
     include network::constants
 
+    class { 'profile::pontoon::sd':
+        before => Class['Profile::Resolving'],
+    }
     include profile::resolving
     include profile::monitoring
 
