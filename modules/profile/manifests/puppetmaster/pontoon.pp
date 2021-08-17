@@ -105,6 +105,9 @@ class profile::puppetmaster::pontoon (
         run_every_minutes => $git_sync_minutes,
     }
 
+    class { 'cergen': }
+    class { 'profile::java': }
+
     ferm::service { 'puppetmaster-pontoon':
         proto  => 'tcp',
         port   => 8140,
